@@ -1,0 +1,8 @@
+.git/
+.nlog/
+.svn/
+.vs/
+.vscode/
+bin/
+obj/
+*.stackdump
