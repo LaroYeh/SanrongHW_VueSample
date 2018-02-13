@@ -32,3 +32,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - Way 2: 於tsconfig.json加上"strictPropertyInitialization":false"，來停用這檢查。
 - Way 3: 使用舊版的TypeScript
 
+### 想放到Github.io測試
