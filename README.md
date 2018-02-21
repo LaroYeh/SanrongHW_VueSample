@@ -22,6 +22,21 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 2. 試著引用別人的library
 3. OAuth 2.0測試
 
+## Question
+Q. "new Vue({  el: '#app'})" 為什看不到類似的用法呢? 是因為寫成Compoment、使用template、還是因為TypeScript而不見了呢?
+Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.
+從這錯誤來看，音位Compoment只會有一個root elm, 所以不需刻意去指定對象，很適合設定class
+
+Q. 可是ID撞名時會怎樣?
+
+
+Q. 使用巢狀式Router
+https://router.vuejs.org/en/essentials/nested-routes.html
+如果直接在有<router-view/>的父頁的某個子頁中放入<router-view/>，並不會有巢狀頁面的效果，反而會編譯失敗
+必須要指定父子關係後，才能使用巢狀頁面(可見TestArea中的效果)
+
+宣告後，仍然可以在更外層使用子頁面，只是會連中間的一起路過
+反之，如果是在子頁面中使用未宣告的頁面，那會前置退到最外層
 
 ## ERROR
 ### 執行「npm run dev」時就出現錯誤「TS2564: Property 'about' has no initializer and is not definitely assigned in the constructor.」

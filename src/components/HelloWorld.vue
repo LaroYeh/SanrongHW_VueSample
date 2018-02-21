@@ -4,7 +4,7 @@
     
     <form action="">
       A:
-      <input type="text" v-model='A'/><br/>
+      <input type="text" v-model.number='A'/><br/>
       B:
       <input type="text"  v-model.number='B'/>
       <br/>
@@ -13,9 +13,6 @@
       <input type="text" v-bind:value="calculate()"/>
       <div>{{D}}</div>
     </form>
-
-
-
   </div>
 </template>
 
