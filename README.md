@@ -27,10 +27,11 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 因為TypeScript於 2.7版添加了--strictPropertyInitialization. 這標籤來確保屬性都有被實作或初始化。<br />
 資料來源: [Announcing TypeScript 2.7 RC](https://blogs.msdn.microsoft.com/typescript/2018/01/17/announcing-typescript-2-7-rc/)
 #### 解決方法
-- Way 1: 將"./src/About.vue" 中的 "public about: string;" 和 "console.warn(this.about);" 先註解掉，待之後用到再加回。
-- Way 2: 於tsconfig.json加上"strictPropertyInitialization":false"，來停用這檢查。
+- 消極的方法 1: 將"./src/About.vue" 中的 "public about: string;" 和 "console.warn(this.about);" 先註解掉，待之後用到再加回。
+- 消極的方法 2: 於tsconfig.json加上"strictPropertyInitialization":false"，來停用這檢查。
+- 正解: 給予初始值 => 「public about: string;」 to 「public about: string = '';」
 
-### 在run dev和部屬到IIS中都可以產生圖片，會什麼用github page時不是js找不到路徑，就是圖片消失呢?
+### 在run dev和部屬到IIS中都可以產生圖片，為什麼用github page不是js找不到路徑，就是圖片消失呢?
 在開發者中工具中，發現github page的檔案會指到錯誤的路徑
 ####解決方法
 調整webpack.config.js，以及部分src路徑，以確保能指向正確的相對路徑
