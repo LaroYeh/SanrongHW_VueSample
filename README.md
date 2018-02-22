@@ -49,3 +49,11 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 child page宣告後，也可以被非parent page的使用，只是會連中間的一起路過
 但如果使用的child page並沒有被宣告在底下，那就會失去巢狀的結構(會循可抵達的路徑開啟預期外的巢狀結構)
 
+### 如何佈署到Github Page
+使用網頁操作，以master branch來說明
+Step 1. 為這專案在Github上建立Repository，並發布上去 (已經有的可略)
+Step 2. 進入專案，切換到Settings，然後往下拖拉到"GitHub Pages"，接著將"Source"的選項切換到"master branch"，然後點下Save
+Step 3. (忘了需不需要) 設定Theme Chooser
+
+如果設定無誤，那他自動產生的路徑就應該能看到網頁了
+比較可能遇到的，大概是path設定錯誤，可用開發人員工具協助找出原因
