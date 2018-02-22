@@ -22,6 +22,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
 export default Vue.extend({
   data: function () {
@@ -29,7 +30,7 @@ export default Vue.extend({
          Title: 'Return Data Test', 
          counter: 2
          }
-  }
+  },
 })
 
 //Compoment為全域的宣告，局部宣告要再微調

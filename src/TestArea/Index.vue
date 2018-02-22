@@ -19,11 +19,11 @@ export default Vue.extend({
 </script>
 
 
-<style>
-
-#TestBasic a{
-  border-radius: 0px 0px 20px 20px;
-  padding: 10px;  
+<style scoped >
+a{
+  text-align:center;
+  border-radius: 25px;
+  padding:  0px 40px; 
   border-color: rgb(0, 153, 115);
   border-width: 2px;
   border-style:solid;
