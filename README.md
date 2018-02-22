@@ -30,6 +30,13 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - Way 1: 將"./src/About.vue" 中的 "public about: string;" 和 "console.warn(this.about);" 先註解掉，待之後用到再加回。
 - Way 2: 於tsconfig.json加上"strictPropertyInitialization":false"，來停用這檢查。
 
+### 在run dev和部屬到IIS中都可以產生圖片，會什麼用github page時不是js找不到路徑，就是圖片消失呢?
+在開發者中工具中，發現github page的檔案會指到錯誤的路徑
+####解決方法
+調整webpack.config.js，以及部分src路徑，以確保能指向正確的相對路徑
+- 在output.publicPath，的 /dist/ 取代成 ./dist/
+- 將assets的結構納入dist中，以防AP Server的自動解析產生差距
+
 ## 自問自答
 ### 為什麼在Compoment中看不到類似"new Vue({  el: '#app'})" 的用法?
 因為Compoment只會有一個Root element, 所以不需去指定對象。如果刻意弄出兩個以上的node，反而會出現「Component template should contain exactly one root element. If you are using v-if on multiple elements, use v-else-if to chain them instead.」
